@@ -12,6 +12,6 @@ func main() {
 	r := gin.Default()
 	InitCORS(r)
 	Routes.InitRoutes(r)
-	//Cron.Init() //Must enabled on live
+	//Cron.Init() //You can use it if you want to run cronjob
 	serve(r)
 }
