@@ -1,0 +1,5 @@
+wrong_password = "كلمة المرور خاطئة"
+invalid_username = "اسم المستخدم غير صحيح"
+invalid_token = "غير مخول للدخول"
+token_required = "رمز التخويل مطلوب"
+token_not_required = "رمز التخويل غير مطلوب"

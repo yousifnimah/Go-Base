@@ -1,0 +1,6 @@
+field_required = "The field is required"
+wrong_password = "Wrong password"
+invalid_username = "The selected username is invalid"
+invalid_token = "The header token is invalid"
+token_required = "The token is required with the request"
+token_not_required = "The token is not required with the request"
