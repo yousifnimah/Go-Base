@@ -2,7 +2,6 @@ package Redis
 
 import (
 	"context"
-	"fmt"
 	"github.com/go-redis/redis/v8"
 	"os"
 	"strconv"
@@ -17,17 +16,6 @@ type RPIP struct {
 }
 
 func Init() {
-	if rdb != nil {
-		rdbErr := rdb.Ping(ctx)
-		if rdbErr != nil {
-			ConnectRedis()
-		}
-	} else {
-		ConnectRedis()
-	}
-}
-
-func ConnectRedis() {
 	RedisDB, _ := strconv.Atoi(os.Getenv("REDIS_DB"))
 	rdb = redis.NewClient(&redis.Options{
 		Addr:     os.Getenv("REDIS_HOST") + ":" + os.Getenv("REDIS_PORT"),
@@ -45,16 +33,18 @@ func SetAccess(UserId int, Username string, ExpiresAt time.Time, Token string) e
 	if errAccess != nil {
 		return errAccess
 	}
+	Close()
 	return nil
 }
 
 func GetAccess(Username string, Token string) error {
 	Init()
+	rdb.Get(ctx, Username+":"+Token).Result()
 	_, err := rdb.Get(ctx, Username+":"+Token).Result()
 	if err != nil {
-		fmt.Println(err)
 		return err
 	}
+	Close()
 	return nil
 }
 
@@ -65,6 +55,7 @@ func InvokeAccess(Username string, Token string) error {
 		key := iter.Val()
 		rdb.Del(ctx, key)
 	}
+	Close()
 	return nil
 }
 
@@ -75,6 +66,7 @@ func InvokeAllAccess(Username string) error {
 		key := iter.Val()
 		rdb.Del(ctx, key)
 	}
+	Close()
 	return nil
 }
 

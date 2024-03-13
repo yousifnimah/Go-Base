@@ -1,8 +1,8 @@
 package Middlewares
 
 import (
-	"gateway_api/App/Handlers/JWT"
-	"gateway_api/Helper"
+	"base/App/Handlers/JWT"
+	"base/Helper"
 	"github.com/gin-gonic/gin"
 	"net/http"
 )

@@ -1,7 +1,7 @@
 package main
 
 import (
-	"gateway_api/Helper"
+	"base/Helper"
 	"github.com/gin-gonic/gin"
 	"os"
 )

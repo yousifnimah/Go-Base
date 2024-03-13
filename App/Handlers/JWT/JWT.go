@@ -1,10 +1,9 @@
 package JWT
 
 import (
+	"base/App/Handlers/Redis"
+	"base/App/Models"
 	"errors"
-	_ "errors"
-	"gateway_api/App/Handlers/Redis"
-	"gateway_api/App/Models"
 	"github.com/golang-jwt/jwt"
 	"os"
 	"time"

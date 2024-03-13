@@ -10,4 +10,5 @@ func main() {
 
 	//Seeders =======
 	_ = seeds.InitUser(dbConnection)
+	_ = seeds.InitAutoReply(dbConnection)
 }

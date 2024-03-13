@@ -1,7 +1,7 @@
 package Bcrypt
 
 import (
-	"gateway_api/App/Models"
+	"base/App/Models"
 	"golang.org/x/crypto/bcrypt"
 )
 

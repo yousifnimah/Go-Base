@@ -5,12 +5,20 @@
 <br />
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="https://i.imgur.com/p45abdy.png" alt="Logo" width="180">
+    <img src="https://www.masiya.net/assets/images/logoblack.png" alt="Logo" width="280">
   </a>
 
-<h3 align="center">Go Lang - Base</h3>
+<h3 align="center">Gateway App (API)</h3>
+
+  <p align="center">
+    <br />
+    <a href="https://www.getpostman.com/collections/e6c3c015deb04b6a6b69"><strong>Explore Postman collection »</strong></a>
+  </p>
 </div>
 
+## Built With
+
+* [![GoLang][Golang]][Golang-url]
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -28,7 +36,7 @@
   ```
   go run <project_name>
   
-  e.g: go run base
+  e.g: go run gateway_api
   ```
 
 - Create Migration File

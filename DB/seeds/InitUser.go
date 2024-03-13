@@ -1,9 +1,9 @@
 package seeds
 
 import (
-	"gateway_api/App/Handlers/Bcrypt"
-	"gateway_api/App/Models"
 	"gorm.io/gorm"
+	"base/App/Handlers/Bcrypt"
+	"base/App/Models"
 )
 
 func InitUser(db *gorm.DB) error {

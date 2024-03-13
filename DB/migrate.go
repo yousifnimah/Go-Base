@@ -1,8 +1,8 @@
 package main
 
 import (
+	"base/Helper"
 	"database/sql"
-	"gateway_api/Helper"
 	"github.com/golang-migrate/migrate/v4"
 	"github.com/golang-migrate/migrate/v4/database/postgres"
 	_ "github.com/golang-migrate/migrate/v4/source/file"

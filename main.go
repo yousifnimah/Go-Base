@@ -1,8 +1,8 @@
 package main
 
 import (
-	"gateway_api/Helper"
-	"gateway_api/Routes"
+	"base/Helper"
+	"base/Routes"
 	"github.com/gin-gonic/gin"
 )
 
@@ -12,6 +12,5 @@ func main() {
 	r := gin.Default()
 	InitCORS(r)
 	Routes.InitRoutes(r)
-	//Cron.Init() //You can use it if you want to run cronjob
 	serve(r)
 }

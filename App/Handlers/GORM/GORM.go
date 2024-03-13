@@ -1,7 +1,7 @@
 package GORM
 
 import (
-	"gateway_api/Helper"
+	"base/Helper"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 	"log"

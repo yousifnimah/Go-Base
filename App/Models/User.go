@@ -1,8 +1,6 @@
 package Models
 
-import (
-	"time"
-)
+import "time"
 
 type User struct {
 	ID        int       `gorm:"column:id"`

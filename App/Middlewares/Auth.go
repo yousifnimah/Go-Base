@@ -1,10 +1,10 @@
 package Middlewares
 
 import (
-	"gateway_api/App/Handlers/JWT"
-	"gateway_api/App/Handlers/Redis"
-	"gateway_api/Helper"
 	"github.com/gin-gonic/gin"
+	"base/App/Handlers/JWT"
+	"base/App/Handlers/Redis"
+	"base/Helper"
 	"net/http"
 )
 

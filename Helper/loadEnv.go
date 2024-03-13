@@ -3,20 +3,12 @@ package Helper
 import (
 	"github.com/joho/godotenv"
 	"log"
-	"os"
-	"regexp"
+	"path/filepath"
 )
 
-const projectDirName = "api" //change it to your project name
-
 func LoadEnv() {
-	projectName := regexp.MustCompile(`^(.*` + projectDirName + `)`)
-	currentWorkDirectory, _ := os.Getwd()
-	rootPath := projectName.Find([]byte(currentWorkDirectory))
-
-	err := godotenv.Load(string(rootPath) + `/.env`)
-
+	err := godotenv.Load(filepath.Join(AppPath(), ".env"))
 	if err != nil {
-		log.Fatalf("Error loading .env file")
+		log.Fatalf("Error loading .env file: %v", err)
 	}
 }
