@@ -5,7 +5,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="https://www.masiya.net/assets/images/logoblack.png" alt="Logo" width="280">
+    <img src="" alt="Logo" width="280">
   </a>
 
 <h3 align="center">Gateway App (API)</h3>
