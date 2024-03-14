@@ -1,8 +1,8 @@
 package main
 
 import (
-	"gateway_api/App/Handlers/GORM"
-	"gateway_api/DB/seeds"
+	"base/App/Handlers/GORM"
+	"base/DB/seeds"
 )
 
 func main() {
@@ -10,5 +10,4 @@ func main() {
 
 	//Seeders =======
 	_ = seeds.InitUser(dbConnection)
-	_ = seeds.InitAutoReply(dbConnection)
 }
